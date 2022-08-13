@@ -1,0 +1,76 @@
+Frage 1:
+    Mit welchen Eingaben wird das Raumschiff gesteuert?
+
+Antwort 1:
+    (Schreiben Sie hier Ihre Antwort hin.)
+	a/d links/rechts	w schießen s stehen bleiben
+--------------------------------------------------------------------------------
+
+Frage 2:
+    Ihr Spiel muss einen Endboss haben. Wo ist der Endboss zu finden?
+
+Antwort 2:
+	der boss ist immer in der oberen zeile der map
+--------------------------------------------------------------------------------
+
+Frage 3:
+    Der Endboss muss mindestens drei mal so groß sein wie die einfachen Gegner.
+    Wie groß ist Ihr Endboss?
+
+Antwort 3:
+ dreimal so groß ( OOO )
+--------------------------------------------------------------------------------
+
+Frage 4:
+    Wie greift Ihr Endboss das Raumschiff an?
+
+Antwort 4:
+	Wenn kein (!) Alien unter ihm ist, schießt er nach unten
+--------------------------------------------------------------------------------
+
+Frage 5:
+    Wodurch unterscheiden sich die verschiedenen Schwierigkeitsgrade in Ihrem
+    Spiel?
+
+Antwort 5:
+ easy = Player 3 leben, boss 2 leben
+ medium = Player 2 leben, boss 3 leben
+ hard = plyaer 1 leben, boss 4 leben
+--------------------------------------------------------------------------------
+
+Frage 6:
+    Wie lange würde es bei Ihrem Spiel ungefähr dauern, bis das Spiel verloren
+    ist, wenn der Spieler im ersten Level nichts tut?
+
+Antwort 6:
+ ca 30 sek wenn man s+enter spammt
+--------------------------------------------------------------------------------
+
+Frage 7:
+    Was passiert, wenn ein Gegner das Raumschiff berührt?
+
+Antwort 7:
+der player bekommt ein schaden
+--------------------------------------------------------------------------------
+
+Frage 8:
+    Wie viele Schüsse sind nötig, um den Endboss zu zerstören?
+
+Antwort 8:
+2-4 schüsse
+--------------------------------------------------------------------------------
+
+Frage 9:
+    Wodurch unterscheiden sich Ihre Level 1 und 2?
+
+Antwort 9:
+ Map größe und anzahl an gegnern 
+--------------------------------------------------------------------------------
+
+Frage 10:
+    Sie müssen eigene Tests schreiben. Was testen Sie dort?
+
+Antwort 10:
+ ob gegener oder player druch die map rauskommen können, ob es richtig kompiliert
+ und ausgeführt werden kann
+--------------------------------------------------------------------------------
