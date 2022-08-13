@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Übung 5</title>
+<style>
+body {
+    margin: 30px auto;
+    max-width: 600px;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: Arial;
+}
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 0 40px 0 40px;
+}
+h2 {
+    margin: 60px 0 20px 0;
+}
+.table-header-row {
+    border-bottom: 2px solid black;
+}
+.table-footer-row {
+    border-top: 2px solid black;
+}
+.center {
+    text-align: center;
+}
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+.monospace {
+    font-family: monospace;
+}
+code {
+    border-radius: 5px;
+    padding: 3px 8px 3px 8px;
+    background-color: lightgray;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+    font-size: 85%;
+}
+.code {
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+    padding: 15px;
+    background-color: lightgray;
+    white-space: nowrap;
+    border-radius: 5px;
+    font-size: 11px;
+}
+.green {
+    color: #32a852;
+}
+.red {
+    color: #ff0000;
+}
+.orange {
+    color: #fa9e0c;
+}
+.overflow {
+    margin: 15px;
+    display: flex;
+    /*justify-content: center;*/
+}
+</style>
+</head>
+<body>
+<h1 class="center">Übung 5</h1>
+<h2 class="center">Zusammenfassung</h2>
+<table>
+<tr class="table-header-row"><th class="left">Aufgabe</th><th class="right">Bestanden</th></tr>
+<tr><td style="font-family:monospace">spaceinvaders</td><td class="right orange"><b>Knapp (✓) 😐</b></td>
+<tr><td style="font-family:monospace">Präsentation</td><td class="right"><b>Steht noch aus</b></td>
+<tr class="table-footer-row"><td><b>Summe</b></td><td class="right"><b>1 / 1</b></td></tr>
+
+</table>
+<h2>Wichtiger Hinweis</h2>
+<div>Bitte Beachten Sie, dass das Abschlussprojekt präsentiert werden muss, um die Veranstaltung zu bestehen. Buchen Sie hierzu einen Termin im ILIAS, falls noch nicht geschehen.</div>
+<h2>Aufgabe spaceinvaders</h2>
+<div><b>Bestanden: <span class="orange">Knapp (✓) 😐</span></b></div>
+<div>Die Tests sind fehlgeschlagen mit Fehlercode 2.
+</div>
+<div>Test-Befehl:
+</div>
+<div> <div class="overflow"><div class="code">make run</div></div></div>
+<div></div>
+<div>Auf der Standardausgabe wurde folgender Text ausgegeben:
+</div>
+<div> <div class="overflow"><div class="code">gcc -g -Wall -Wextra -Werror -Wmissing-prototypes -c keyboard.c<br>gcc -g -std=c99 -Wall -Wextra -Werror -Wmissing-prototypes -fsanitize=address -fsanitize=undefined spaceinvaders.c keyboard.o -lrt -o spaceinvaders_fsanitize<br>tests/argtests_fsanitize.sh<br><br>INFO: Starting command line argument tests with fsanitize.<br><br>INFO: Testing level 1 and quit command with fsanitize.<br>	./spaceinvaders_fsanitize &lt; input/quit.txt &gt; output/1.txt<br><br>	OK: Return value is 0 for input q.<br><br>INFO: Testing level 2 and quit command with fsanitize.<br>	./spaceinvaders_fsanitize &lt; input/quit.txt &gt; output/2.txt<br><br>	OK: Return value is 0 for input q.<br><br>INFO: Testing level 3 and quit command with fsanitize.<br>	./spaceinvaders_fsanitize &lt; input/quit.txt &gt; output/3.txt<br><br>	OK: Return value is 0 for input q.<br><br>INFO: Testing level 4 and quit command with fsanitize.<br>	./spaceinvaders_fsanitize &lt; input/quit.txt &gt; output/4.txt<br><br>	OK: Return value is 0 for input q.<br><br>INFO: Testing level 5 and quit command with fsanitize.<br>	./spaceinvaders_fsanitize &lt; input/quit.txt &gt; output/5.txt<br><br>	OK: Return value is 0 for input q.<br>INFO: Testing valid command line arguments.<br><br>INFO: Testing command with valid arguments:<br>	./spaceinvaders_fsanitize<br><br>	OK: Return value is 0 as expected.<br><br>INFO: Testing command with valid arguments:<br>	./spaceinvaders_fsanitize --level level/1.txt<br><br>	OK: Return value is 0 as expected.<br><br>INFO: Testing command with valid arguments:<br>	./spaceinvaders_fsanitize --level level/1.txt --difficulty easy<br><br>	OK: Return value is 0 as expected.<br><br>INFO: Testing command with valid arguments:<br>	./spaceinvaders_fsanitize --difficulty normal --level level/2.txt<br><br>	OK: Return value is 0 as expected.<br><br>INFO: Testing command with valid arguments:<br>	./spaceinvaders_fsanitize --difficulty hard<br><br>	OK: Return value is 0 as expected.<br><br>INFO: Testing invalid command line arguments.<br><br>INFO: Testing command with invalid arguments:<br>	./spaceinvaders_fsanitize --level<br><br>	OK: Return value is 1 as expected.<br>	OK: Something has been printed to stderr.<br><br>INFO: Testing command with invalid arguments:<br>	./spaceinvaders_fsanitize --levil level/1.txt<br><br>	OK: Return value is 1 as expected.<br>	OK: Something has been printed to stderr.<br><br>INFO: Testing command with invalid arguments:<br>	./spaceinvaders_fsanitize --level level/1.txt --difficulty<br><br>	OK: Return value is 1 as expected.<br>	OK: Something has been printed to stderr.<br><br>INFO: Testing command with invalid arguments:<br>	./spaceinvaders_fsanitize --difficulty easy --level<br><br>	OK: Return value is 1 as expected.<br>	OK: Something has been printed to stderr.<br><br>INFO: Testing command with invalid arguments:<br>	./spaceinvaders_fsanitize --difficulty cheese<br><br>	OK: Return value is 1 as expected.<br>	OK: Something has been printed to stderr.<br><br>INFO: Testing command with invalid arguments:<br>	./spaceinvaders_fsanitize --dooficulty easy<br><br>	OK: Return value is 1 as expected.<br>	OK: Something has been printed to stderr.<br><br>INFO: Testing command with invalid arguments:<br>	./spaceinvaders_fsanitize --level level/1.txt --level level/1.txt<br><br>	OK: Return value is 1 as expected.<br>	OK: Something has been printed to stderr.<br><br>INFO: Testing command with invalid arguments:<br>	./spaceinvaders_fsanitize --difficulty easy --difficulty hard<br><br>	OK: Return value is 1 as expected.<br>	OK: Something has been printed to stderr.<br><br>INFO: Testing command with invalid arguments:<br>	./spaceinvaders_fsanitize --level easy --difficulty level/1.txt<br><br>	OK: Return value is 1 as expected.<br>	OK: Something has been printed to stderr.<br><br>INFO: Testing non-existing level file.<br><br>INFO: Testing command with invalid arguments:<br>	./spaceinvaders_fsanitize --level level/Diese_Datei_sollte_nicht_existieren.txt<br><br>	OK: Return value is 2 as expected.<br>	OK: Something has been printed to stderr.<br><br>INFO: Testing unreadable level file.<br><br>INFO: Testing command with invalid arguments:<br>	./spaceinvaders_fsanitize --level level<br><br>	OK: Return value is 3 as expected.<br>	OK: Something has been printed to stderr.<br><br>INFO: Testing empty level file.<br><br>INFO: Testing command with invalid arguments:<br>	./spaceinvaders_fsanitize --level level/empty.txt<br><br>	OK: Return value is 4 as expected.<br>	OK: Something has been printed to stderr.<br><br>gcc -g -std=c99 -Wall -Wextra -Werror -Wmissing-prototypes spaceinvaders.c keyboard.o -lrt -o spaceinvaders_valgrind<br>tests/argtests_valgrind.sh<br><br>INFO: Starting command line argument tests with valgrind.<br><br>INFO: Testing level 1 and quit command with valgrind.<br><br>valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./spaceinvaders_valgrind &lt; input/quit.txt &gt; output/1.txt<br><br>	OK: Return value is 0 for input q.<br><br>INFO: Testing level 2 and quit command with valgrind.<br><br>valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./spaceinvaders_valgrind &lt; input/quit.txt &gt; output/2.txt<br><br>	OK: Return value is 0 for input q.<br><br>INFO: Testing level 3 and quit command with valgrind.<br><br>valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./spaceinvaders_valgrind &lt; input/quit.txt &gt; output/3.txt<br><br>	OK: Return value is 0 for input q.<br><br>INFO: Testing level 4 and quit command with valgrind.<br><br>valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./spaceinvaders_valgrind &lt; input/quit.txt &gt; output/4.txt<br><br>	OK: Return value is 0 for input q.<br><br>INFO: Testing level 5 and quit command with valgrind.<br><br>valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./spaceinvaders_valgrind &lt; input/quit.txt &gt; output/5.txt<br><br>	OK: Return value is 0 for input q.<br>INFO: Testing valid command line arguments.<br><br>INFO: Testing command with valid arguments:<br><br>	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=output/valgrind_log.txt ./spaceinvaders_valgrind<br><br>	OK: Return value is 0 as expected.<br><br>INFO: Testing command with valid arguments:<br><br>	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=output/valgrind_log.txt ./spaceinvaders_valgrind --level level/1.txt<br><br>	OK: Return value is 0 as expected.<br><br>INFO: Testing command with valid arguments:<br><br>	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=output/valgrind_log.txt ./spaceinvaders_valgrind --level level/1.txt --difficulty easy<br><br>	OK: Return value is 0 as expected.<br><br>INFO: Testing command with valid arguments:<br><br>	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=output/valgrind_log.txt ./spaceinvaders_valgrind --difficulty normal --level level/2.txt<br><br>	OK: Return value is 0 as expected.<br><br>INFO: Testing command with valid arguments:<br><br>	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=output/valgrind_log.txt ./spaceinvaders_valgrind --difficulty hard<br><br>	OK: Return value is 0 as expected.<br><br>INFO: Testing invalid command line arguments.<br><br>INFO: Testing command:<br><br>	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./spaceinvaders_valgrind --level<br><br>	OK: Return value is 1 as expected.<br>	OK: Something has been printed to stderr.<br><br>INFO: Testing command:<br><br>	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./spaceinvaders_valgrind --level level/1.txt --difficulty<br><br>	OK: Return value is 1 as expected.<br>	OK: Something has been printed to stderr.<br><br>INFO: Testing command:<br><br>	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./spaceinvaders_valgrind --difficulty easy --level<br><br>	OK: Return value is 1 as expected.<br>	OK: Something has been printed to stderr.<br><br>INFO: Testing command:<br><br>	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./spaceinvaders_valgrind --difficulty cheese<br><br>	OK: Return value is 1 as expected.<br>	OK: Something has been printed to stderr.<br><br>INFO: Testing command:<br><br>	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./spaceinvaders_valgrind --dooficulty easy<br><br>	OK: Return value is 1 as expected.<br>	OK: Something has been printed to stderr.<br><br>INFO: Testing command:<br><br>	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./spaceinvaders_valgrind --level level/1.txt --level level/1.txt<br><br>	OK: Return value is 1 as expected.<br>	OK: Something has been printed to stderr.<br><br>INFO: Testing command:<br><br>	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./spaceinvaders_valgrind --difficulty easy --difficulty hard<br><br>	OK: Return value is 1 as expected.<br>	OK: Something has been printed to stderr.<br><br>INFO: Testing command:<br><br>	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./spaceinvaders_valgrind --level easy --difficulty level/1.txt<br><br>	OK: Return value is 1 as expected.<br>	OK: Something has been printed to stderr.<br><br>INFO: Testing non-existing level file.<br><br>INFO: Testing command:<br><br>	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./spaceinvaders_valgrind --level level/Diese_Datei_sollte_nicht_existieren.txt<br><br>	OK: Return value is 2 as expected.<br>	OK: Something has been printed to stderr.<br><br>INFO: Testing unreadable level file.<br><br>INFO: Testing command:<br><br>	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./spaceinvaders_valgrind --level level<br><br>	OK: Return value is 3 as expected.<br>	OK: Something has been printed to stderr.<br><br>INFO: Testing empty level file.<br><br>INFO: Testing command:<br><br>	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./spaceinvaders_valgrind --level level/empty.txt<br><br>	OK: Return value is 4 as expected.<br>	OK: Something has been printed to stderr.<br><br>tests/codestyle.py<br>  1: Checking code style of spaceinvaders.c<br>  2: Checking code style of keyboard.c<br>  3: Checking code style of keyboard.h<br>  4: Checking code style of spaceinvaders.h<br><br>	OK: Code style test passed.<br><br>tests/check_checksums.sh<br><br>INFO: Checking if files have been modified.<br><br>tests/argtests_fsanitize.sh: OK<br>tests/argtests_valgrind.sh: OK<br>tests/check_checksums.sh: OK<br>tests/check_valgrind_log.sh: OK<br>keyboard.h: OK<br>input/quit.txt: OK<br><br>	OK: Files have not been modified.<br><br>tests/misc.py<br>INFO: Testing various things.<br><br>	OK: File endboss.png exists and is smaller than 500 kB.<br>	OK: The word &quot;struct&quot; was found. Hopefully it has been used in a sensible way.<br>	OK: The word &quot;enum&quot; was found. Hopefully it has been used in a sensible way.<br><br>tests/questions.py<br>INFO: Checking if answers are missing.<br>	OK: Answer to question 1 is not empty.<br>	OK: Answer to question 2 is not empty.<br>	OK: Answer to question 3 is not empty.<br>	OK: Answer to question 4 is not empty.<br>	OK: Answer to question 5 is not empty.<br>	OK: Answer to question 6 is not empty.<br>	OK: Answer to question 7 is not empty.<br>	OK: Answer to question 8 is not empty.<br>	OK: Answer to question 9 is not empty.<br>	OK: Answer to question 10 is not empty.<br><br>Alle von uns zur Verfügung gestellten Tests sind durchgelaufen.<br>Bitte beachten Sie, dass die Tests nur prüfen, ob die Fragen<br>überhaupt beantwortet wurden. Sie dienen nur als Erinnerung.<br>Ob die Antworten auch Sinn ergeben prüfen wir erst nach<br>der Abgabe.<br>Weiterhin wird der Spielablauf nicht automatisch auf Speicher-<br>zugriffsfehler getestet. Das ist Ihre Aufgabe.<br><br><br>tests/mytest.sh<br>### <br>#M# <br># # <br>#A# <br>### <br>ERROR: irgendwas ist falsch.</div></div></div>
+<h3>Anmerkungen</h3>
+<div>Der erste Test funktioniert leider nicht, aber die Testfälle danach machen wenigstens irgendwas. Außerdem sollten einige der Level sehr groß sein, aber wenigstens funktioniert das Programm trotzdem mit den entsprechenden Größen.</div></body>
+</html>
+
